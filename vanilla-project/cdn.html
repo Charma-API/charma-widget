@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CDN</title>
+    <script type="module">
+      import { widget } from "https://cdn.jsdelivr.net/npm/@charma/js@1.0.22/dist/index.js";
+      import { defineCustomElements } from "https://cdn.jsdelivr.net/npm/@charma/js@1.0.22/dist/loader/index.js";
+      defineCustomElements(window, {});
+      window.widget = widget;
+      widget
+        .init(
+          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvcmdJZCI6IjI0ZDdkYTgyLWNjOWItNGJlZi04MTdjLTI2N2FjZGU3MjJlOSIsImlhdCI6MTY4MDAwNDU1NywiZXhwIjoxNjgwMDA0NjE3fQ.f-BBpE2l5IVwsOxnN9Xn7ot_xiYfCT4uvEjOqNLimq8"
+        )
+        .then(() => {});
+    </script>
+  </head>
+  <body>
+    <charma-widget></charma-widget>
+    <button id="myButton">Click Me</button>
+
+    <script type="module">
+      // Get a reference to the button element by its id
+      const button = document.getElementById("myButton");
+      // Add a click event listener to the button
+      button.addEventListener("click", function () {
+        widget
+          .init(
+            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJvcmdJZCI6IjI0ZDdkYTgyLWNjOWItNGJlZi04MTdjLTI2N2FjZGU3MjJlOSIsImlhdCI6MTY4MDAwNDU1NywiZXhwIjoxNjgwMDA0NjE3fQ.f-BBpE2l5IVwsOxnN9Xn7ot_xiYfCT4uvEjOqNLimq8"
+          )
+          .then(() => {
+            // defineCustomElements(window, {});
+            widget.show({ productId: "CH21181903" });
+          });
+      });
+    </script>
+  </body>
+</html>
