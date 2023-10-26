@@ -11,8 +11,6 @@
 
 2. Initialize it and store in global variable.
 
-   if you wish to initialize it upon mounting of component, use the code below
-
    ```html
    <script type="module">
      import { widget } from "https://cdn.jsdelivr.net/npm/@charma/js@1.0.22/dist/index.js";
@@ -22,8 +20,7 @@
    </script>
    ```
 
-3. Use it
-   Use it on load
+3. Use it on load
 
    ```html
    <script type="module">
@@ -33,7 +30,7 @@
    </script>
    ```
 
-   or use it in button click (or any event you need it)
+   or use it in button click (or any event you want)
 
    ```html
    <script type="module">
